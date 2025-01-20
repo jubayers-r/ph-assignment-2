@@ -107,6 +107,35 @@ body {
   display: none;
 }
 
+.hero {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.hero-content {
+  max-width: 45%;
+  margin: auto 0;
+}
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+.hero-title-orange {
+  color: orange;
+}
+.hero-title-skyblue {
+  color: var(--sky-blue);
+}
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+.hero-btn {
+  font: 1.25rem;
+  color: white;
+  background-color: black;
+}
+
 @media screen and (max-width: 576px) {
   .nav-options, .nav-btn, .nav-logo > h1 {
     display: none;
@@ -117,5 +146,28 @@ body {
   .nav-line {
     display: block;
     border: 0.5px solid orange;
+  }
+  main {
+    margin: auto 16.5px;
+  }
+  .hero {
+    margin: 20px 16.5px;
+    flex-direction: column;
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2rem;
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  .hero-description {
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
