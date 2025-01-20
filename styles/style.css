@@ -103,10 +103,7 @@ body {
   background-color: orange;
   color: white;
 }
-.nav-svg {
-  display: none;
-}
-.nav-line {
+.nav-svg, .nav-line {
   display: none;
 }
 
