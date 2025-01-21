@@ -85,7 +85,7 @@ a:active {
   margin-bottom: 38.67px;
 }
 
-body {
+header {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -166,6 +166,7 @@ body {
   text-align: center;
 }
 .curriculum-cards {
+  max-width: 70%;
   margin: 80px auto;
   justify-content: space-between;
 }
@@ -208,6 +209,49 @@ body {
 .slider-right {
   height: 60px;
   width: 60px;
+}
+
+.footer {
+  background-color: rgb(1, 172, 253);
+  color: white;
+  height: 519px;
+}
+.footer-content {
+  padding: 123px 228.9px 174px 140px;
+  justify-content: space-evenly;
+  height: 222px;
+}
+.footer-left {
+  width: 28%;
+}
+.footer-left > p {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.footer-logo {
+  margin-bottom: 35.68px;
+}
+.footer-logo > h1 {
+  font-size: 42.14px;
+  line-height: 39.51px;
+  margin-left: 23.26px;
+}
+.footer-middle {
+  gap: 20px;
+}
+.footer-middle > h3 {
+  font-size: 1.5rem;
+}
+.footer-middle > a {
+  font-size: 1.25rem;
+  color: white;
+}
+.footer-social > h3 {
+  font-size: 1.625rem;
+  margin-bottom: 32px;
+}
+.footer-social-logo {
+  gap: 10.15px;
 }
 
 @media screen and (max-width: 576px) {
@@ -258,5 +302,24 @@ body {
   }
   .slider {
     display: none;
+  }
+  .footer {
+    min-height: 100vh;
+  }
+  .footer-content {
+    flex-direction: column;
+    padding: 60px 20px;
+    justify-content: start;
+  }
+  .footer-left {
+    width: 100%;
+  }
+  .footer-left > p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+  }
+  .footer-social {
+    margin: 32px 0 60px;
   }
 }/*# sourceMappingURL=style.css.map */
