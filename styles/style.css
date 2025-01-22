@@ -1,5 +1,6 @@
 /* === Default starts === */
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -54,14 +55,23 @@ a:active {
   display: grid;
 }
 
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .btn {
   width: 197px;
   height: 50px;
   border: 0;
   border-radius: 12px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
+  color: white;
+}
+.btn-black {
+  background-color: black;
 }
 
 .card {
@@ -72,6 +82,7 @@ a:active {
   height: 476.78px;
   text-align: center;
   padding: 41px 54px;
+  display: grid;
 }
 .card > img {
   margin: 0 auto;
@@ -85,11 +96,64 @@ a:active {
   margin-bottom: 38.67px;
 }
 
+.story-card {
+  background-color: white;
+  border-radius: 16px;
+  width: 95%;
+}
+.story-card > img {
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  height: 62%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.story-card > h1 {
+  font-size: 1rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.date-label {
+  padding: 15px 19px;
+  color: white;
+  border-radius: 47px;
+  width: 174.5px;
+  height: 48px;
+  font-family: "Raleway", serif;
+  font-size: 15.34px;
+  font-weight: 500;
+  position: relative;
+  left: 5%;
+  top: -8%;
+}
+.date-label-skyblue {
+  background-color: rgb(60, 216, 232);
+  position: relative;
+  left: 8%;
+  top: -4%;
+}
+.date-label-green {
+  background-color: rgb(149, 178, 38);
+}
+.date-label-purple {
+  background-color: rgb(93, 88, 240);
+}
+
 header {
   max-width: 1440px;
   margin: 0 auto;
 }
 
+marquee {
+  color: white;
+  background-color: orange;
+  width: 100%;
+  font-size: large;
+  padding: 10px;
+}
+
+/* navbar-section */
 .nav {
   align-items: center;
   justify-content: space-between;
@@ -122,12 +186,12 @@ header {
 }
 .nav-btn {
   background-color: orange;
-  color: white;
 }
 .nav-svg, .nav-line {
   display: none;
 }
 
+/* hero section */
 .hero {
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -151,15 +215,11 @@ header {
   line-height: 1.5rem;
   margin-bottom: 20px;
 }
-.hero-btn {
-  font: 1.25rem;
-  color: white;
-  background-color: black;
-}
 
+/* standard curriculum section */
 .curriculum {
   background-image: url("../assets/bg.png");
-  margin: 60px auto;
+  background-repeat: no-repeat;
 }
 .curriculum > h1 {
   font-size: 2.875rem;
@@ -211,10 +271,59 @@ header {
   width: 60px;
 }
 
+/*  stories section */
+.stories {
+  background-image: url("../assets/bg.png"), linear-gradient(0deg, rgba(254, 163, 1, 0.3), rgba(255, 255, 255, 0.3) 100%);
+  background-repeat: no-repeat;
+}
+.stories > h1 {
+  font-size: 2.785rem;
+  text-align: center;
+}
+.stories-content {
+  width: 80%;
+}
+.stories-content > h1 {
+  margin-bottom: 51px;
+  margin-left: 38px;
+  font-size: 1.25rem;
+}
+.stories-content > p {
+  margin-left: 38px;
+  font-family: "Raleway", serif;
+  font-size: 15.34px;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+}
+.stories-articles {
+  width: 70%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.stories-articles-small {
+  gap: 19px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.stories-article-big {
+  width: 40%;
+  height: 630.52px;
+  background-color: white;
+  border-radius: 16px;
+}
+.stories-article-big > img {
+  border-radius: 16px 16px 0 0;
+}
+.stories > .btn {
+  margin: 0 auto;
+}
+
+/* footer section */
 .footer {
   background-color: rgb(1, 172, 253);
   color: white;
-  height: 519px;
+  height: 60vh;
 }
 .footer-content {
   padding: 123px 228.9px 174px 140px;
@@ -254,7 +363,8 @@ header {
   gap: 10.15px;
 }
 
-@media screen and (max-width: 576px) {
+/* media queries */
+@media screen and (max-width: 768px) {
   .nav-options, .nav-btn, .nav-logo > h1 {
     display: none;
   }
@@ -290,6 +400,7 @@ header {
   }
   .curriculum-cards {
     flex-direction: column;
+    max-width: 100%;
   }
   .curriculum-cards > .yellow {
     margin: 12.3px auto;
@@ -302,6 +413,40 @@ header {
   }
   .slider {
     display: none;
+  }
+  .stories {
+    width: 100vw;
+    margin-left: -17px;
+  }
+  .stories-article-big {
+    display: none;
+  }
+  .stories-articles {
+    display: grid;
+    width: 90vw;
+  }
+  .stories-articles-small {
+    gap: 10px;
+  }
+  .story-card {
+    width: 100%;
+  }
+  .story-card > img {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    height: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .story-card > h1 {
+    font-size: 0.65rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .date-label {
+    width: 60%;
+    font-size: 0.75rem;
+    top: -12%;
   }
   .footer {
     min-height: 100vh;
@@ -321,5 +466,17 @@ header {
   }
   .footer-social {
     margin: 32px 0 60px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer {
+    min-height: 740px;
+  }
+  .footer-logo > img {
+    width: 18vw;
+  }
+  .footer-logo > h1 {
+    font-size: 1.5rem;
+    margin: 5px;
   }
 }/*# sourceMappingURL=style.css.map */
